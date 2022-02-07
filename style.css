@@ -1,0 +1,316 @@
+<style>
+
+{}
+
+.page {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: -125vw;
+  overflow-y: auto;
+  z-index: 0;
+  margin:0;
+  background-color: #DDD;
+  color: black;
+  transition: all 300ms ease;
+  padding: 25px;
+  margin-top: 60px;
+  height: 1500px;
+
+}
+
+.page:target {
+  left: 0vw;
+  z-index: 3;
+}
+
+.dark-mode .page{
+  background-color: #222;
+  color: white;
+  transition: all 300ms ease;
+}
+
+
+.upgrade1BarOver {
+  width: 250px;
+  height: 30px;
+  background-color: #00000000;
+  border: 3px solid #04AA6D;
+  transition: all 300ms ease;
+}
+
+.upgrade1Bar {
+  width: 25px;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+body {
+  margin:0;
+  background-color: #DDD;
+  color: black;
+  transition: all 300ms ease;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 8px 2px;
+  transition: all 300ms ease;
+  cursor: pointer;
+  background-color: #FFFFFF00;
+  color: black;
+  border: 2px solid #555;
+  box-shadow: 0 10px #999;
+}
+
+.button:hover {
+ background-color: #555;
+ color: white;
+}
+
+.button:active {
+  background-color: #999;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  transition: all 50ms ease;
+  color: black;
+  z-index: 3;
+}
+
+.dark-mode .button {
+  color: white;
+  border: 2px solid #666;
+  box-shadow: 0 9px #555;
+}
+
+.dark-mode .button:hover {
+ background-color: #666;
+ color: white;
+}
+
+.dark-mode .button:active {
+  background-color: #999;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  transition: all 50ms ease;
+  color: black;
+}
+
+.buttonAddUnits {
+  color: #8F18FF;
+  border: 2px solid #8F18FF;
+}
+.buttonAddUnits:hover {
+  background-color: #8F18FF;
+  color: white;
+}
+.buttonAddUnits:active {
+  background-color: #B566FF;
+  color: black;
+}
+.dark-mode .buttonAddUnits{
+  color: #8F18FF;
+  border: 2px solid #8F18FF;
+}
+.dark-mode .buttonAddUnits:hover{
+  background-color: #8F18FF;
+  color: white;
+}
+.dark-move .buttonAddUnits:active{
+  background-color: #B566FF;
+  color: black;
+}
+*/
+.buttonReset {
+  color: #F22;
+  border: 2px solid #F22;
+}
+.buttonReset:hover {
+  background-color: #F22;
+  color: white;
+}
+.buttonReset:active {
+  background-color: #F88;
+  color: black;
+}
+.dark-mode .buttonReset {
+  color: #F22;
+  border: 2px solid #F22;
+}
+.dark-mode .buttonReset:hover {
+  background-color: #F22;
+  color: white;
+}
+.dark-mode .buttonReset:active {
+  background-color: #F88;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: white;
+  transition: all 300ms ease;
+}
+
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 300ms ease;
+  z-index: 4;
+}
+
+.navbarUnderline {
+  background: -webkit-linear-gradient(0deg, rgba(255,0,255,1) 0%, #8F18FF 2%, #8F18FF 23%, rgba(255,0,255,1) 25%, #8F18FF 27%, #8F18FF 48%, rgba(255,0,255,1) 50%, #8F18FF 52%, #8F18FF 73%, rgba(255,0,255,1) 75%, #8F18FF 77%, #8F18FF 98%, rgba(255,0,255,1) 100%);
+  position: fixed;
+  top: 55px;
+  height: 5px;
+  width: 100%;
+  z-index: 5;
+  filter: blur(00px);
+  background-size: 250%;
+  animation: navbarUnderlineAnimation 3s linear infinite;
+}
+@keyframes navbarUnderlineAnimation { 
+    0%{background-position:90%}
+    100%{background-position:10%}
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none; 
+  font-size: 17px;
+  transition: all 300ms ease;
+}
+
+.navbar .unitsDisplayAmount {
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-left: 8px;
+  float: left;
+  size: 20px 55px;
+}
+
+.navbar .unitsDisplayAmount:hover {
+  background-color: #333;
+}
+
+.dark-mode .navbar .unitsDisplayAmount:hover {
+  background-color: #333;
+}
+
+.navbar .title {
+  float: left;
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+}
+
+.navbar .test {
+  padding: 19px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0px 0px;
+  transition: all 300ms ease;
+  cursor: pointer;
+  background-color: #FFFFFF00;
+  float: left;
+  color: #8F18FF;
+  border-left: 5px solid #8F18FF;
+  border-right: 5px solid #8F18FF;
+  border-top: none;
+  border-bottom: none;
+  user-select: none;
+}
+
+.navbar .test:hover {
+ background-color: #8F18FF;
+ color: white;
+}
+
+.navbar .test:active {
+  transition: all 50ms ease;
+  z-index: 3;
+  background-color: #B566FF;
+  color: black;
+}
+
+.dark-mode .navbar .test {
+  color: #8F18FF;
+  border-left: 5px solid #8F18FF;
+  border-right: 5px solid #8F18FF;
+  border-top: none;
+  border-bottom: none;
+}
+
+.dark-mode .navbar .test:hover {
+ background-color: #9c33ff;
+ color: white;
+}
+
+.dark-mode .navbar .test:active {
+  transition: all 50ms ease;
+  color: black;
+  background-color: #B566FF;
+}
+
+.navbar .icon {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  float: left;
+}
+
+.navbar .icon:hover {
+  background-color: #333;
+}
+
+.dark-mode .navbar .icon {
+  transition: all 300ms ease;
+}
+
+.dark-mode .navbar .icon:hover {
+  background-color: #444;
+}
+
+.navbar a:hover {
+  background: #444;
+  z-index: 5;
+  transition: all 300ms ease
+}
+
+.dark-mode .navbar {
+  background-color: #333;
+  transition: all 300ms ease;
+}
+
+.main {
+  padding: 25px;
+  margin-top: 50px;
+  height: 1500px;
+}
+
+</style>
