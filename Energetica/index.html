@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="My first HTML project, a little incremental game. Still in heavy development.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="tylersfoot">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Energetica</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  </head>
+
+<body style="font-family: sans-serif">
+
+<script src="script.js"></script>
+
+  <div class="navbarUnderline"></div>
+  <div class="navbar">
+    <a class="icon" href="#">
+    <img class="iconImage" border="0" alt="Icon" src="images/icon.png" width="35" height="35" href="#">
+    </a>
+  
+    <a class="unitsDisplayAmount" id="unitsDisplayAmount" href="#"></a>
+    <a class="buttonAddUnitsNavbar">
+    <a id="buttonAddUnits" class="test" onclick="buttonAddUnits();" value="Generate Energy">Generate Energy</a>
+
+    <a href="#debug">Debug</a>
+    <a href="#settings">Settings</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#statistics">Statistics</a>
+    <a href="#upgrades">Upgrades</a>
+    <a href="#">Main</a>
+    
+  </div>
+
+<div class="main">
+
+  <div class="page" id="statistics">
+    <h2>Statistics</h2>
+    <p id="unitsDisplayTotalUnits"></p>
+  </div>
+
+  <div class="page" id="achievements">
+    <h2>Achievements</h2>
+    <p>W.I.P.</p>
+  </div>
+
+   <div class="page" id="upgrades">
+    <h2>Upgrades</h2>
+    <p>W.I.P.</p>
+  </div>
+
+  <div class="page" id="debug">
+    <h2>Debug</h2>
+    <p id="unitsDisplayAmountReal"></p>
+    <p id="counttest"></p>
+    <p id="unitsDisplayPerSecondReal"></p>
+    <p id="unitsDisplayUpgrade1Power"></p>
+    <p id="unitsDisplayUpgrade1Cost"></p>
+    <p id="unitsDisplayUpgrade1MultCost"></p>
+    <p id="unitsDisplayUpgrade2Power"></p>
+    <p id="unitsDisplayUpgrade2Cost"></p>
+    <p id="unitsDisplayUpgrade2MultCost"></p>
+    <p id="unitsDisplayUpgrade3Power"></p>
+    <p id="unitsDisplayUpgrade3Cost"></p>
+    <p id="unitsDisplayUpgrade3MultCost"></p>
+  </div>
+
+  <div class="page" id="settings">
+    <h2>Settings</h2>
+    <input id="save" type="button" class="button" value="Save" onclick="saveData();" />
+
+    <input id="load" type="button" class="button" value="Load" onclick="loadData();" />
+
+    <input id="reset" type="button" class="button buttonReset" value="Reset" onclick="reset();" />
+
+    <input id="darkmode" type ="button" class="button" value="Toggle Dark Mode" onclick="darkMode()" />
+    
+  </div>
+
+    <!-- 
+      <input id="buttonAddUnits" type="button" class="button buttonAddUnits" value="Synthesize Energy" onclick="buttonAddUnits();">
+    -->
+      <input id="buttonUpgrade1Add" type="button" class="button" value="" onclick="buttonUpgrade1Add();" />
+
+      <input id="buttonUpgrade1Mult" type="button" class="button" value="" onclick="buttonUpgrade1Mult(2);" />
+
+      <input id="buttonUpgrade2Add" type="button" class="button" value="" onclick="buttonUpgrade2Add();" />
+
+      <input id="buttonUpgrade2Mult" type="button" class="button" value="" onclick="buttonUpgrade2Mult(100);" />
+
+      <input id="buttonUpgrade3Add" type="button" class="button" value="" onclick="buttonUpgrade3Add();" />
+
+      <input id="buttonUpgrade3Mult" type="button" class="button" value="" onclick="buttonUpgrade3Mult(100);" />
+
+
+
+    <p id="unitsDisplayClickAmount"></p>
+    <p id="unitsDisplayUpgrade1Amount"></p>
+    <p id="unitsDisplayPerSecond"></p>
+    <p id="unitsDisplayUpgrade2Amount"></p>
+    <p id="unitsDisplayUpgrade3Amount"></p>
+
+    <h3>Upgrade 1 Progress:</h3>
+    
+ <div class="upgrade1BarOver">
+   <div id="upgrade1Bar" class="upgrade1Bar">hello</div>
+ </div>
+    
+
+</div>
+
+
+
+  </body>
+</html>
