@@ -1,4 +1,4 @@
-
+/*
 function start() {
   if (localStorage.darkmode == 0) {
     var body = document.body;
@@ -18,3 +18,4 @@ function darkMode() {
      localStorage.darkmode = 0;
    }
 }
+*/
