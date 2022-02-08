@@ -10,13 +10,12 @@
   overflow-y: auto;
   z-index: 0;
   margin:0;
-  background-color: #DDD;
-  color: black;
-  transition: all 300ms ease;
   padding: 25px;
   margin-top: 60px;
   height: 1500px;
-
+  background-color: #222;
+  color: white;
+  transition: all 300ms ease;
 }
 
 .page:target {
@@ -24,35 +23,11 @@
   z-index: 3;
 }
 
-.dark-mode .page{
-  background-color: #222;
-  color: white;
-  transition: all 300ms ease;
-}
-
-
-.upgrade1BarOver {
-  width: 250px;
-  height: 30px;
-  background-color: #00000000;
-  border: 3px solid #04AA6D;
-  transition: all 300ms ease;
-}
-
-.upgrade1Bar {
-  width: 25px;
-  height: 30px;
-  background-color: #04AA6D;
-  text-align: center;
-  line-height: 30px;
-  color: white;
-}
-
 body {
   margin:0;
-  background-color: #DDD;
-  color: black;
   transition: all 300ms ease;
+  background-color: #222;
+  color: white;
 }
 
 .button {
@@ -65,37 +40,18 @@ body {
   transition: all 300ms ease;
   cursor: pointer;
   background-color: #FFFFFF00;
-  color: black;
-  border: 2px solid #555;
-  box-shadow: 0 10px #999;
-}
-
-.button:hover {
- background-color: #555;
- color: white;
-}
-
-.button:active {
-  background-color: #999;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-  transition: all 50ms ease;
-  color: black;
-  z-index: 3;
-}
-
-.dark-mode .button {
   color: white;
   border: 2px solid #666;
   box-shadow: 0 9px #555;
 }
 
-.dark-mode .button:hover {
+.button:hover {
  background-color: #666;
  color: white;
 }
 
-.dark-mode .button:active {
+.button:active {
+  z-index: 3;
   background-color: #999;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -103,61 +59,31 @@ body {
   color: black;
 }
 
-.buttonAddUnits {
+
+#button_energetica {
   color: #8F18FF;
   border: 2px solid #8F18FF;
+  box-shadow: 0 9px rgb(100, 14, 180);
 }
-.buttonAddUnits:hover {
-  background-color: #8F18FF;
-  color: white;
+#button_energetica:hover {
+ background-color: #8F18FF;
+ color: white;
 }
-.buttonAddUnits:active {
+#button_energetica:active{
   background-color: #B566FF;
-  color: black;
-}
-.dark-mode .buttonAddUnits{
-  color: #8F18FF;
-  border: 2px solid #8F18FF;
-}
-.dark-mode .buttonAddUnits:hover{
-  background-color: #8F18FF;
-  color: white;
-}
-.dark-move .buttonAddUnits:active{
-  background-color: #B566FF;
-  color: black;
-}
-*/
-.buttonReset {
-  color: #F22;
-  border: 2px solid #F22;
-}
-.buttonReset:hover {
-  background-color: #F22;
-  color: white;
-}
-.buttonReset:active {
-  background-color: #F88;
-  color: black;
-}
-.dark-mode .buttonReset {
-  color: #F22;
-  border: 2px solid #F22;
-}
-.dark-mode .buttonReset:hover {
-  background-color: #F22;
-  color: white;
-}
-.dark-mode .buttonReset:active {
-  background-color: #F88;
   color: black;
 }
 
-.dark-mode {
-  background-color: #222;
-  color: white;
-  transition: all 300ms ease;
+#button_pong {
+  
 }
+#button_pong:hover {
+ 
+}
+#button_pong:active{
+ 
+}
+
 
 
 .active {
@@ -167,14 +93,15 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
   position: fixed;
   top: 0;
   width: 100%;
-  transition: all 300ms ease;
   z-index: 4;
+  background-color: #333;
+  transition: all 300ms ease;
 }
 
+/*
 .navbarUnderline {
   background: -webkit-linear-gradient(0deg, rgba(255,0,255,1) 0%, #8F18FF 2%, #8F18FF 23%, rgba(255,0,255,1) 25%, #8F18FF 27%, #8F18FF 48%, rgba(255,0,255,1) 50%, #8F18FF 52%, #8F18FF 73%, rgba(255,0,255,1) 75%, #8F18FF 77%, #8F18FF 98%, rgba(255,0,255,1) 100%);
   position: fixed;
@@ -189,6 +116,25 @@ body {
 @keyframes navbarUnderlineAnimation { 
     0%{background-position:90%}
     100%{background-position:10%}
+}
+*/
+
+
+
+.navbarUnderline { 
+  top: 55px;
+  height: 5px;
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+background: 
+   linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+   animation: rainbow 2s linear infinite;
+background-size: 1800% 1800%;
+}
+
+@keyframes rainbow {
+  to {background-position:0 -200%}
 }
 
 .navbar a {
@@ -211,14 +157,6 @@ body {
   size: 20px 55px;
 }
 
-.navbar .unitsDisplayAmount:hover {
-  background-color: #333;
-}
-
-.dark-mode .navbar .unitsDisplayAmount:hover {
-  background-color: #333;
-}
-
 .navbar .title {
   float: left;
   padding-top: 20px;
@@ -237,16 +175,16 @@ body {
   cursor: pointer;
   background-color: #FFFFFF00;
   float: left;
+  user-select: none;
   color: #8F18FF;
   border-left: 5px solid #8F18FF;
   border-right: 5px solid #8F18FF;
   border-top: none;
   border-bottom: none;
-  user-select: none;
 }
 
 .navbar .test:hover {
- background-color: #8F18FF;
+ background-color: #9c33ff;
  color: white;
 }
 
@@ -255,25 +193,6 @@ body {
   z-index: 3;
   background-color: #B566FF;
   color: black;
-}
-
-.dark-mode .navbar .test {
-  color: #8F18FF;
-  border-left: 5px solid #8F18FF;
-  border-right: 5px solid #8F18FF;
-  border-top: none;
-  border-bottom: none;
-}
-
-.dark-mode .navbar .test:hover {
- background-color: #9c33ff;
- color: white;
-}
-
-.dark-mode .navbar .test:active {
-  transition: all 50ms ease;
-  color: black;
-  background-color: #B566FF;
 }
 
 .navbar .icon {
@@ -285,14 +204,6 @@ body {
 }
 
 .navbar .icon:hover {
-  background-color: #333;
-}
-
-.dark-mode .navbar .icon {
-  transition: all 300ms ease;
-}
-
-.dark-mode .navbar .icon:hover {
   background-color: #444;
 }
 
@@ -302,9 +213,8 @@ body {
   transition: all 300ms ease
 }
 
-.dark-mode .navbar {
-  background-color: #333;
-  transition: all 300ms ease;
+.contact_discord {
+  color: #5865F2;
 }
 
 .main {
