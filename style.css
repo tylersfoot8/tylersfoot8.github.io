@@ -35,7 +35,7 @@ body {
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 25px;
   margin: 8px 2px;
   transition: all 300ms ease;
   cursor: pointer;
@@ -61,7 +61,7 @@ body {
 
 
 #button_energetica {
-  color: #8F18FF;
+  color:#8F18FF;
   border: 2px solid #8F18FF;
   box-shadow: 0 9px rgb(100, 14, 180);
 }
@@ -84,7 +84,45 @@ body {
  
 }
 
+.wip {
+font-family: 'Comfortaa';
+font-size: 30px;
+font-weight: 1000;
+background: linear-gradient(to right, red, rgb(200, 50, 0), red);
+animation: descriptionanim 5000ms linear infinite;
+background-size: 50% 250%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 
+}
+
+.descriptions {
+font-family: 'Comfortaa';
+font-size: 20px;
+font-weight: 1000;
+}
+
+@keyframes descriptionanim {
+  to {background-position: -600% 0%}
+}
+
+#description_energetica {
+background: linear-gradient(to right, #8F18FF, #B566FF, #8F18FF);
+animation: descriptionanim 5000ms linear infinite;
+background-size: 50% 250%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
+}
+
+#description_pong {
+background: linear-gradient(to right, lightgray, gray, lightgray);
+animation: descriptionanim 5000ms linear infinite;
+background-size: 50% 250%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
+}
 
 .active {
   background-color: #04AA6D;
@@ -101,40 +139,47 @@ body {
   transition: all 300ms ease;
 }
 
-/*
-.navbarUnderline {
-  background: -webkit-linear-gradient(0deg, rgba(255,0,255,1) 0%, #8F18FF 2%, #8F18FF 23%, rgba(255,0,255,1) 25%, #8F18FF 27%, #8F18FF 48%, rgba(255,0,255,1) 50%, #8F18FF 52%, #8F18FF 73%, rgba(255,0,255,1) 75%, #8F18FF 77%, #8F18FF 98%, rgba(255,0,255,1) 100%);
-  position: fixed;
-  top: 55px;
-  height: 5px;
-  width: 100%;
-  z-index: 5;
-  filter: blur(00px);
-  background-size: 250%;
-  animation: navbarUnderlineAnimation 3s linear infinite;
-}
-@keyframes navbarUnderlineAnimation { 
-    0%{background-position:90%}
-    100%{background-position:10%}
-}
-*/
-
-
-
 .navbarUnderline { 
   top: 55px;
-  height: 5px;
+  height: 10px;
   width: 100%;
   z-index: 5;
   position: fixed;
+  transform: scaleX(2);
 background: 
-   linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
-   animation: rainbow 2s linear infinite;
-background-size: 1800% 1800%;
+   linear-gradient(to right, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+   animation: rainbow 5000ms linear infinite;
+background-size: 75% 500%;
 }
 
 @keyframes rainbow {
-  to {background-position:0 -200%}
+  to {background-position: 600% 0}
+}
+
+.home_title {
+font-family: 'Comfortaa';
+font-size: 30px;
+text-align: center;
+font-weight: 700;
+background: linear-gradient(to right, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+animation: rainbow2 5000ms linear infinite;
+background-size: 75% 500%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.navbar_section_title {
+font-family: 'Comfortaa';
+font-size: 50px;
+font-weight: 1000;
+text-align: center;
+color: deeppink !important;
+text-shadow: 2px 2px 0 black;
+}
+
+@keyframes rainbow2 {
+  to {background-position: 600% 0%}
 }
 
 .navbar a {
